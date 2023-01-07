@@ -237,6 +237,7 @@ Engine::RunStatus Engine::Run(RunConfiguration configuration) {
 }
 
 void Engine::BeginFrame(fml::TimePoint frame_time, uint64_t frame_number) {
+  FML_LOG(ERROR) << "LeeEngine > Engine::BeginFrame";
   TRACE_EVENT0("flutter", "Engine::BeginFrame");
   runtime_controller_->BeginFrame(frame_time, frame_number);
 }
